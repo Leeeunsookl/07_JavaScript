@@ -21,3 +21,28 @@
     이 방법 중 가장 일반적이고 간단한 방법이 객체 리터럴을 사용하는 방법이다.
     중괄호( {} ) 내부에 0개 이상의 프로퍼티를 정의한다.
 */
+
+var student = {
+    // 키 - 값 쌍으로 구성 된 프로퍼티
+    // 프로퍼티란? 객체의 상태를 나타내는 값(data)
+    name : '조평훈',
+    age : 20,
+    // 메소드 : 프로퍼티를 참조하고 조작할 수 있는 동작
+    getInfo : function() {
+        return `${this.name}(은)는 ${this.age}세 입니다.`;
+    }
+};
+
+console.log(student);
+console.table(student);
+console.log(typeof student);
+
+// 프로퍼티를 정의하지 않을 시 빈 객체가 생성된다.
+var student2 = {};
+console.log(typeof student2);
+console.log(student2);
+
+/* 객체 리터럴의 중괄호는 코드 블록을 의미하지 않는다.
+    따라서 닫는 중괄호 뒤에는 세미콜론 ; 을 붙인다.
+    숫자 값이나 문자열을 만드는 것과 유사하게 리터럴로 객체를 생성할 수 있다.
+*/
