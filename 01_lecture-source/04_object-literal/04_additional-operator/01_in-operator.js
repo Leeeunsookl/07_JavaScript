@@ -16,4 +16,4 @@ console.log(stundent.test === undefined);
 console.log('============================')
 console.log('name' in stundent);            // true - 존재한다.
 console.log('height' in stundent);          // false - 존재하지 않는다.
-console.log('test' in stundent);
+console.log('test' in stundent);            // true - 존재한다.

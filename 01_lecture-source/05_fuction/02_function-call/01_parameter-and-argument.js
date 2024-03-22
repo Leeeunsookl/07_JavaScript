@@ -33,10 +33,17 @@ function hi(name = '아무개') {
     // 인수를 전달하지 않았을 경우, undefined를 전달했을 경우 ES6에서 도입 된
     // 매개변수 기본값을 사용할 수 있다.
 
+    // 적절한 인수가 전달 되었는 지 확인하는 방법
+    if(arguments.length !== 1 || typeof name !== 'string' || name.length === 0) {
+        throw new TypeError('인수는 1개여야하고, 문자열 값이며, 빈 문자열은 허용되지 않습니다.!!');
+    }
 
     return `${name} 안녕~~`;
 }
 
-// result = hi();
-result = hi('홍길동', '유관순');
+result = hi();
+// TypeError 발생시켜 인수에 대한 검증 과정
+// result = hi('홍길동', '유관순');
+// result = hi(1);
+// result = hi('');
 console.log(result);
