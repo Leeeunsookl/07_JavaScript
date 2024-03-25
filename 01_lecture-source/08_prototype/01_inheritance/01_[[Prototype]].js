@@ -31,5 +31,23 @@ const student = {
     프로토 타입을 설정하는 것이 좋다.
 */
 student.__proto__ = user;
-
+// activate 프로퍼티 -> user
 console.log(student.activate);
+student.login();
+
+// student 의 프로토타입은 user 이다. 혹은 student 는 user 상속 받는다 라고 표현한다.
+// 프로토타입에서 상속받은 프로퍼티 '상속 프로퍼티(inherited property)'라고 부른다.
+
+// 프로토타입 체인
+const ohgiraffersStudent = {
+    class : 402,
+    __proto__ : student
+};
+
+// ohgiraffersStudent.__proto__ = student;
+
+console.log(ohgiraffersStudent.activate);   // user 에서 상속
+console.log(ohgiraffersStudent.passion);    // student 에서 상속
+
+// __proto__ 의 값은 객체 or null 만 가능하며 다른 자료형은 무시된다.
+// 순환 참조가 허용되지 않는다.
