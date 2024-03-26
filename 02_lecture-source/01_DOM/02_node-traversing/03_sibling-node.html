@@ -39,8 +39,15 @@
         const $element = document.getElementById('element');
 
         // firstElementChild 프로퍼티는 요소 노드만 반환한다.
-        const {firstElementChild} = $element;
-        console.log(firstElementChild);
+        // const {firstElementChild} = $element;
+        const a = $element.firstElementChild;
+        console.log(a);
+
+        const {nextElementSibling} = firstElementChild;
+        console.log(nextElementSibling);
+
+        const {previousElementSibling} = nextElementSibling;
+        console.log(previousElementSibling);
 
     </script>
 </body>
