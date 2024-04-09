@@ -62,6 +62,11 @@
         console.log($form.elements);
         console.log($form.elements.username);
 
+        const $select = document.getElementsByName('age');
+        const [options] = $select;
+        console.log(options);
+        
+
         const $username = $form.username;
         console.log($username);
         console.log(`$form.username.value : ${$username.value}`);
